@@ -21,10 +21,10 @@ export class ResultsComponent implements OnInit {
 	}
 
 	getSessionInfo(id: number): {} {
-		return this.sessionData.sessions[id - 1];
+		return this.sessionData.getSessionId(id);
 	}
 
 	getSessionStartTime(id: number): string {
-		return this.sessionData.sessions[id - 1].time;
+		return this.sessionData.getSessionStartTime(id);
 	}
 }

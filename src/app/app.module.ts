@@ -7,6 +7,7 @@ import { SessionsComponent } from "./sessions/sessions.component";
 import { ResultsComponent } from "./results/results.component";
 
 import { SessionData } from "./services/session-data.service";
+import { CalculateStint } from "./services/calculate-stint.service";
 
 @NgModule({
 	declarations: [
@@ -18,7 +19,9 @@ import { SessionData } from "./services/session-data.service";
 		BrowserModule,
 		AppRoutingModule
 	],
-	providers: [SessionData],
+	providers: [
+		SessionData,
+		CalculateStint],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
