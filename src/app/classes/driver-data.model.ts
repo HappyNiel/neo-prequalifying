@@ -7,6 +7,7 @@ export class DriverInfo {
 	public validStints: any[] | undefined;
 	public validStintTimes: number[] | undefined;
 	public fastestStint: number | undefined;
+	public parsedFastestStint: string | undefined;
 
 	constructor(
 		driverId: number,
@@ -21,5 +22,6 @@ export class DriverInfo {
 		this.validStints = [];
 		this.validStintTimes = [];
 		this.fastestStint = undefined;
+		this.parsedFastestStint = undefined;
 	}
 }

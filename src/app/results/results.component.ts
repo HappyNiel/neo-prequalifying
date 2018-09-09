@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { SessionData } from "../services/session-data.service";
 import { ActivatedRoute, Params } from "@angular/router";
+import { DriverInfo } from "../classes/driver-data.model";
 
 @Component({
 	selector: "app-results",
@@ -26,5 +27,9 @@ export class ResultsComponent implements OnInit {
 
 	getSessionStartTime(id: number): string {
 		return this.sessionData.getSessionStartTime(id);
+	}
+
+	getParsedSessionData(id: number): DriverInfo[] {
+		return this.sessionData.getParsedSessionData(id);
 	}
 }

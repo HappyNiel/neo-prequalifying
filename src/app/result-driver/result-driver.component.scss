@@ -1,0 +1,16 @@
+.ResultRow{
+	display: flex;
+	padding: 0.2rem 0;
+
+	.ResultId{
+		width: 20%;
+	}
+
+	.ResultName{
+		width: 40%;
+	}
+
+	.ResultTime{
+		width: 30%;
+	}
+}

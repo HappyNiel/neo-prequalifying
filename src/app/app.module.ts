@@ -8,12 +8,14 @@ import { ResultsComponent } from "./results/results.component";
 
 import { SessionData } from "./services/session-data.service";
 import { CalculateStint } from "./services/calculate-stint.service";
+import { ResultDriverComponent } from './result-driver/result-driver.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		SessionsComponent,
-		ResultsComponent
+		ResultsComponent,
+		ResultDriverComponent
 	],
 	imports: [
 		BrowserModule,

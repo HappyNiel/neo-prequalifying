@@ -3,3 +3,17 @@
 </p>
 
 <p>The start time of this session was: {{ getSessionStartTime(sessionId) }}</p>
+
+<div class="Container">
+		<div class="HeaderContainer">
+				<div class="HeaderElement">Driver id</div>
+				<div class="HeaderElement">Driver name</div>
+				<div class="HeaderElement">Fastest stint</div>
+			</div>
+			<div class="ResultContainer">
+				<app-result-driver
+					*ngFor="let driver of getParsedSessionData(sessionId)"
+					[driverInfoData]="driver">
+				</app-result-driver>
+			</div>
+</div>
