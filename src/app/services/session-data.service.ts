@@ -1,7 +1,7 @@
 import * as dataSession1 from "../../json/session1-results.json";
 import * as dataSession2 from "../../json/session2-results.json";
 import * as dataSession3 from "../../json/session3-results.json";
-import * as dataSession4 from "../../json/session2-results.json";
+import * as dataSession4 from "../../json/session4-results.json";
 import { DriverInfo } from "../classes/driver-data.model";
 
 export class SessionData {

@@ -138,6 +138,7 @@ export class ResultDriverComponent implements OnInit {
 	}
 
 	formatLapTime(lapTime: number): string {
+		// return "";
 		const full = lapTime / 10000;
 		const secsFull = parseInt(full);
 		let leftOver = full - secsFull;

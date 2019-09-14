@@ -16,14 +16,14 @@ export class SessionsComponent implements OnInit {
 		this.sessions = this.sessionData.sessions;
 		this.processAllSessionData();
 
-		console.log(this.sessionData.getParsedSessionData(3))
+		console.log(this.sessionData.getParsedSessionData(4));
 	}
 
 	private processAllSessionData(): void {
 		this.processSingleSessionData(1);
 		this.processSingleSessionData(2);
 		this.processSingleSessionData(3);
-		// this.processSingleSessionData(4);
+		this.processSingleSessionData(4);
 	}
 
 	private processSingleSessionData(sessionId: number): void {
