@@ -22,6 +22,7 @@ export class ResultDriverComponent implements OnInit {
 		this.lapData = this.driverInfoData.lapData;
 
 		this.fetchStintsFromLapDataAndRemoveInvalidStints(this.lapData);
+		console.log(this.lapData);
 	}
 
 	fetchStintsFromLapDataAndRemoveInvalidStints(lapData: any[]): void {
@@ -53,10 +54,10 @@ export class ResultDriverComponent implements OnInit {
 	createStints(totalLaps: any[], lapNumber: number): void {
 
 		const indexOfLap = totalLaps.findIndex(lap => lap.lap_num === lapNumber);
-		const sliced = totalLaps.slice(indexOfLap, indexOfLap + 5);
+		const sliced = totalLaps.slice(indexOfLap, indexOfLap + 10);
 
 		// Only return the stints that have 10 laps.
-		if (sliced.length === 5) {
+		if (sliced.length === 10) {
 
 			this.driverInfoData.stints.push(sliced);
 			this.driverInfoData.validStints.push(sliced);
@@ -123,7 +124,7 @@ export class ResultDriverComponent implements OnInit {
 			totalLapTime += lap.lap_time;
 		}
 
-		const averageLapTime = totalLapTime / 5;
+		const averageLapTime = totalLapTime / 10;
 		this.driverInfoData.validStintTimes.push(averageLapTime);
 	}
 
