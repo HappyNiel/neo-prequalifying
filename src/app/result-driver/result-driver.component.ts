@@ -95,7 +95,7 @@ export class ResultDriverComponent implements OnInit {
 		for (let i = 0; i < stintLaps.length; i++) {
 
 			// Check if the lap has an invalid lap
-			if (stintLaps[i].flags !== 0) {
+			if (stintLaps[i].flags !== 0 && stintLaps[i].flags !== 256) {
 				validStint = false;
 				break;
 			}
