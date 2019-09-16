@@ -145,15 +145,19 @@ export class ResultDriverComponent implements OnInit {
 		const full = lapTime / 10000;
 		const secsFull = parseInt(full);
 		let leftOver = full - secsFull;
-		leftOver = parseInt(leftOver * 1000);
+		leftOver = parseInt(leftOver * 10000);
 
-		if (leftOver < 100) {
+		if (leftOver < 1000) {
 
 			leftOver = "0" + leftOver;
 		}
-		else if (leftOver < 10) {
+		else if (leftOver < 100) {
 
 			leftOver = "00" + leftOver;
+		}
+		else if (leftOver < 10) {
+
+			leftOver = "000" + leftOver;
 		}
 
 		let mins = parseInt(secsFull / 60);
