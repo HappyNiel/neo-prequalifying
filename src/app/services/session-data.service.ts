@@ -18,7 +18,7 @@ export class SessionData {
 		{ id: 1, sessionId: 10, startTime: "08:00", sessionResults: dataSession1["driverData"], parsedSessionResults: this.parsedDataSession1},
 		{ id: 2, sessionId: 20, startTime: "12:00", sessionResults: dataSession2["driverData"], parsedSessionResults: this.parsedDataSession2},
 		{ id: 3, sessionId: 30, startTime: "17:00", sessionResults: dataSession3["driverData"], parsedSessionResults: this.parsedDataSession3},
-		// { id: 4, sessionId: 40, startTime: "20:00", sessionResults: dataSession4["driverData"], parsedSessionResults: this.parsedDataSession4}
+		{ id: 4, sessionId: 40, startTime: "20:00", sessionResults: dataSession4["driverData"], parsedSessionResults: this.parsedDataSession4}
 	];
 
 	public getSessionStartTime(id: number): string {
