@@ -45,9 +45,6 @@ export class SessionsComponent implements OnInit {
 				if (sessionId === 3) {
 					this.sessionData.parsedDataSession3.push(new DriverInfo(driverId, driverName, driverlapData));
 				}
-				if (sessionId === 4) {
-					this.sessionData.parsedDataSession4.push(new DriverInfo(driverId, driverName, driverlapData));
-				}
 			}
 		}
 	}

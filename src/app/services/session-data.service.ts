@@ -1,9 +1,10 @@
-import * as dataSession1 from "../../json/24hseries/results-session1.json";
-import * as dataSession2 from "../../json/24hseries/results-session2.json";
-import * as dataSession3 from "../../json/24hseries/results-session3.json";
-import * as dataSession4 from "../../json/24hseries/results-session4.json";
+import * as dataSession1 from "../../json/24hseries/season2/results-session1.json";
+import * as dataSession2 from "../../json/24hseries/season2/results-session2.json";
+// import * as dataSession3 from "../../json/24hseries/results-session3.json";
 import { DriverInfo } from "../classes/driver-data.model";
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class SessionData {
 
 	/**
@@ -12,13 +13,13 @@ export class SessionData {
 	public parsedDataSession1: DriverInfo[] = [];
 	public parsedDataSession2: DriverInfo[] = [];
 	public parsedDataSession3: DriverInfo[] = [];
-	public parsedDataSession4: DriverInfo[] = [];
+	// public parsedDataSession4: DriverInfo[] = [];
 
 	public sessions = [
 		{ id: 1, sessionId: 10, startTime: "08:00", sessionResults: dataSession1["driverData"], parsedSessionResults: this.parsedDataSession1},
-		{ id: 2, sessionId: 20, startTime: "12:00", sessionResults: dataSession2["driverData"], parsedSessionResults: this.parsedDataSession2},
-		{ id: 3, sessionId: 30, startTime: "17:00", sessionResults: dataSession3["driverData"], parsedSessionResults: this.parsedDataSession3},
-		{ id: 4, sessionId: 40, startTime: "20:00", sessionResults: dataSession4["driverData"], parsedSessionResults: this.parsedDataSession4}
+		{ id: 2, sessionId: 20, startTime: "13:00", sessionResults: dataSession2["driverData"], parsedSessionResults: this.parsedDataSession2},
+		// { id: 3, sessionId: 30, startTime: "18:00", sessionResults: dataSession3["driverData"], parsedSessionResults: this.parsedDataSession3},
+		// { id: 4, sessionId: 40, startTime: "20:00", sessionResults: dataSession4["driverData"], parsedSessionResults: this.parsedDataSession4}
 	];
 
 	public getSessionStartTime(id: number): string {

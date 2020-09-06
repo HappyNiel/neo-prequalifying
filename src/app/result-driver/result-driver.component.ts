@@ -161,16 +161,16 @@ export class ResultDriverComponent implements OnInit {
 		}
 
 		let mins = parseInt(secsFull / 60);
-		let secs = secsFull - (mins * 60);
+		let secs = secsFull;
 
 		if (secs < 10) {
 
 			secs = "0" + secs;
 		}
-		if (mins > 0) {
+		// if (mins > 0) {
 
-			return mins + ":" + secs + "." + leftOver;
-		}
+		// 	return mins + ":" + secs + "." + leftOver;
+		// }
 
 		return secs + "." + leftOver;
 	}
