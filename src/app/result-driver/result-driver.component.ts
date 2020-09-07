@@ -22,7 +22,8 @@ export class ResultDriverComponent implements OnInit {
 		this.lapData = this.driverInfoData.lapData;
 
 		this.fetchStintsFromLapDataAndRemoveInvalidStints(this.lapData);
-		console.log(this.lapData);
+        console.log(`${this.driverName}(${this.driverId}):`);
+        console.log(this.lapData);
 	}
 
 	fetchStintsFromLapDataAndRemoveInvalidStints(lapData: any[]): void {
@@ -113,7 +114,7 @@ export class ResultDriverComponent implements OnInit {
 		for (let i = 0; i < validStints.length; i++) {
 			const stint = validStints[i];
 			this.calculateAverageLapTimesOfEachStint(stint);
-		}
+        }
 
 		this.getFastestStint();
 	}
@@ -127,18 +128,23 @@ export class ResultDriverComponent implements OnInit {
 		}
 
 		const averageLapTime = totalLapTime / 10;
-		this.driverInfoData.validStintTimes.push(averageLapTime);
+        this.driverInfoData.validStintTimes.push(averageLapTime);
+        
 	}
 
 	getFastestStint(): void {
-		const stintTimes = this.driverInfoData.validStintTimes;
-		const fastestStint = Math.min(...stintTimes);
+        const stintTimes = this.driverInfoData.validStintTimes;
+        const fastestStint = Math.min(...stintTimes);
+        
+        console.log(stintTimes);
+        // console.log(stintTimes.map(x => this.formatLapTime(x)));
 
 		this.driverInfoData.fastestStint = fastestStint;
 		this.driverInfoData.parsedFastestStint = this.formatLapTime(fastestStint);
 
-		this.fastestStint = this.formatLapTime(fastestStint);
-	}
+        this.fastestStint = this.formatLapTime(fastestStint);
+        console.log(this.fastestStint);
+    }
 
 	formatLapTime(lapTime: number): string {
 		// return "";
